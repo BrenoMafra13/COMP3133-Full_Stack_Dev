@@ -1,0 +1,53 @@
+
+<h1>Hello, {{ title() }}</h1>
+{{ city }}
+
+<button (click)="onAlertClick()">Alert!!!</button>
+
+<app-student [stud]="stud"></app-student>
+
+<p>Congratulations! Your app is running.</p>
+
+<h2>Pipes Example</h2>
+<p>lowercase: {{ 'PriTesh' | lowercase}}</p>
+<p>uppercase: {{ 'PriTesh' | uppercase}}</p>
+<p>titlecase: {{ 'PriTesh patel' | titlecase}}</p>
+
+<h2>Date Pipe Examples</h2>
+<p>Today is {{today}}</p>
+<p>Today is {{today | date}}</p>
+<p>Today is {{today | date:'short'}}</p>
+<p>Today is {{today | date:'fullDate'}}</p>
+<p>Today is {{today | date:'longDate'}}</p>
+<p>Today is {{today | date:'mediumDate'}}</p>
+<p>Today is {{today | date:'shortDate'}}</p>
+<p>Today is {{today | date:'MM/dd/yyyy'}}</p>
+<p>Today is {{today | date:'MMMM d, y'}}</p>
+<p>Today is {{today | date:'EEEE, MMMM d, y'}}</p>
+<p>Today is {{today | date:'yyyy-MM-dd'}}</p>
+<p>Today is {{today | date:'dd/MM/yyyy'}}</p>
+<p>Today is {{today | date:'MM/dd/yyyy'}}</p>
+<p>Today is {{today | date:'MMMM d, y'}}</p>
+<p>Today is {{today | date:'EEEE, MMMM d, y'}}</p>
+<p>Today is {{today | date:'yyyy-MM-dd'}}</p>
+<p>Today is {{today | date:'dd/MM/yyyy'}}</p>
+<p>Today is {{today | date:'MM/dd/yyyy'}}</p>
+<p>Today is {{today | date:'MMMM d, y'}}</p>
+
+<h2>Currency Pipe Examples</h2>
+<p>Currency: {{ 1234567 | currency }}</p>
+<p>Currency:CAD {{ 1234567 | currency:'CAD' }}</p>
+<p>Currency:USD {{ 1234567 | currency:'USD' }}</p>
+<p>Currency:EUR {{ 1234567 | currency:'EUR' }}</p>
+<p>Currency:JPY {{ 1234567 | currency:'JPY' }}</p>
+<p>Currency:GBP {{ 1234567 | currency:'GBP' }}</p>
+<p>Currency:INR {{ 1234567 | currency:'INR' }}</p>
+<p>Currency:BRL {{ 1234567 | currency:'BRL' }}</p>
+
+<h2>Number Pipe Examples</h2>
+<p>number: {{ 123567890 | number}}</p>
+<p>number: {{ 123567890.123456 | number:'1.4-4'}}</p>
+<p>number: {{ 123567890.1234 | number:'3.0-0'}}</p>
+<p>percent: {{ 0.20 | percent }}</p>
+
+<router-outlet></router-outlet>
