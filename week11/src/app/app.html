@@ -1,0 +1,53 @@
+<h1>Hello, {{ title() }}</h1>
+
+<h1>Form Input Introduction</h1>
+<h2>Welcome, {{ name }}</h2>
+<input type="text" placeholder="Enter Name" [(ngModel)]="name" />
+<button (click)="showName()">Show Name</button>
+
+<h1>For, If and Switch</h1>
+@for (country of countryList; track $index) {
+  <p>{{ country }}</p>
+}@empty {
+  <p>No countries available.</p>
+}
+<h1>Learning Angular</h1>
+@for (doc of docsList; track $index) {
+  <a [href]="doc.link" target="_blank" rel="noopener">
+    <p>{{doc.title}}</p>
+  </a>
+}@empty {
+  <h4>No Document Found</h4>
+}
+
+@if (isShow) {
+  <p>Show is true: {{isShow}}</p>
+} @else {
+  <p>Show is false: {{isShow}}</p>
+}
+
+@switch (weekDay) {
+  @case (1) {
+    <p>Monday</p>
+  }
+  @case (2) {
+    <p>Tuesday</p>
+  }
+  @case (3) {
+    <p>Wednesday</p>
+  }
+  @case (4) {
+    <p>Thursday</p>
+  }
+  @case (5) {
+    <p>Friday</p>
+  }
+  @default {
+    <p>Weekend</p>
+  }
+}
+
+<h1>HttpClient</h1>
+<app-postlist/>
+
+<router-outlet />
